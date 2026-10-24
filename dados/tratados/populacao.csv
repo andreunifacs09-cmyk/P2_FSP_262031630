@@ -1,0 +1,21 @@
+ano,cod_ibge,municipio,pop_oficial,fonte_pop_oficial,pop_harmonizada,metodo_harmonizacao
+2016,3550308,São Paulo,12038175.0,Estimativa IBGE (SIDRA 6579),11352317,Interpolação geométrica Censo 2010–Censo 2022
+2017,3550308,São Paulo,12106920.0,Estimativa IBGE (SIDRA 6579),11368870,Interpolação geométrica Censo 2010–Censo 2022
+2018,3550308,São Paulo,12176866.0,Estimativa IBGE (SIDRA 6579),11385448,Interpolação geométrica Censo 2010–Censo 2022
+2019,3550308,São Paulo,12252023.0,Estimativa IBGE (SIDRA 6579),11402049,Interpolação geométrica Censo 2010–Censo 2022
+2020,3550308,São Paulo,12325232.0,Estimativa IBGE (SIDRA 6579),11418675,Interpolação geométrica Censo 2010–Censo 2022
+2021,3550308,São Paulo,12396372.0,Estimativa IBGE (SIDRA 6579),11435325,Interpolação geométrica Censo 2010–Censo 2022
+2022,3550308,São Paulo,11451999.0,Censo 2022 (SIDRA 4709),11451999,Censo 2022
+2023,3550308,São Paulo,,Sem estimativa publicada para 2023,11671681,Interpolação geométrica Censo 2022–Estimativa 2024
+2024,3550308,São Paulo,11895578.0,Estimativa IBGE (SIDRA 6579),11895578,Estimativa IBGE
+2025,3550308,São Paulo,11904961.0,Estimativa IBGE (SIDRA 6579),11904961,Estimativa IBGE
+2016,3509502,Campinas,1173370.0,Estimativa IBGE (SIDRA 6579),1109189,Interpolação geométrica Censo 2010–Censo 2022
+2017,3509502,Campinas,1182429.0,Estimativa IBGE (SIDRA 6579),1114110,Interpolação geométrica Censo 2010–Censo 2022
+2018,3509502,Campinas,1194094.0,Estimativa IBGE (SIDRA 6579),1119053,Interpolação geométrica Censo 2010–Censo 2022
+2019,3509502,Campinas,1204073.0,Estimativa IBGE (SIDRA 6579),1124019,Interpolação geométrica Censo 2010–Censo 2022
+2020,3509502,Campinas,1213792.0,Estimativa IBGE (SIDRA 6579),1129006,Interpolação geométrica Censo 2010–Censo 2022
+2021,3509502,Campinas,1223237.0,Estimativa IBGE (SIDRA 6579),1134015,Interpolação geométrica Censo 2010–Censo 2022
+2022,3509502,Campinas,1139047.0,Censo 2022 (SIDRA 4709),1139047,Censo 2022
+2023,3509502,Campinas,,Sem estimativa publicada para 2023,1162275,Interpolação geométrica Censo 2022–Estimativa 2024
+2024,3509502,Campinas,1185977.0,Estimativa IBGE (SIDRA 6579),1185977,Estimativa IBGE
+2025,3509502,Campinas,1187974.0,Estimativa IBGE (SIDRA 6579),1187974,Estimativa IBGE

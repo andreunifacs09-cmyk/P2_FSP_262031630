@@ -1,0 +1,100 @@
+REGRESSÕES — P2 FSP (262031630). Variáveis em R$ mil de 2025 por habitante, exceto PIB per capita (R$ mil de 2025). Painel de 2 municípios: inferência limitada; ver texto.
+====================================================================================================
+M1 — Flypaper clássico (2016–2023): despesa ~ transferências + PIB per capita + efeito fixo
+Equação: desp ~ transf + pib + SP  |  Erros-padrão robustos HC1
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept    -17.7823      3.086     -5.762      0.000     -23.831     -11.734
+transf         3.5230      0.523      6.731      0.000       2.497       4.549
+pib            0.1756      0.025      6.931      0.000       0.126       0.225
+SP             0.3362      0.231      1.453      0.146      -0.117       0.790
+==============================================================================
+Diagnósticos [M1 — Flypaper clássico (2016–2023): despesa ~ transferências + PIB per capita + efeito fixo]: n=16; R²=0.917; R² aj.=0.896; Breusch-Pagan p=0.814; Durbin-Watson=1.33; Jarque-Bera p=0.927; VIF={'transf': 3.7, 'pib': 5.8, 'SP': 7.2}
+Teste de Wald (transf = pib): estatística=42.771; p-valor=0.000
+====================================================================================================
+M2 — Propensão a gastar (2016–2025): despesa ~ transferências + arrecadação própria + tendência
+Equação: desp ~ transf + propria + SP + t  |  Erros-padrão robustos HC1
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      3.5971      2.521      1.427      0.154      -1.344       8.538
+transf        -0.2150      0.726     -0.296      0.767      -1.638       1.208
+propria        0.9541      0.425      2.243      0.025       0.121       1.788
+SP             0.0455      0.473      0.096      0.923      -0.881       0.972
+t              0.0953      0.097      0.986      0.324      -0.094       0.285
+==============================================================================
+Diagnósticos [M2 — Propensão a gastar (2016–2025): despesa ~ transferências + arrecadação própria + tendência]: n=20; R²=0.882; R² aj.=0.851; Breusch-Pagan p=0.652; Durbin-Watson=0.83; Jarque-Bera p=0.529; VIF={'transf': 5.6, 'propria': 28.1, 'SP': 22.2, 't': 14.3}
+Teste de Wald (transf = propria): estatística=2.534; p-valor=0.111
+====================================================================================================
+M3 — Esforço fiscal (2016–2023): arrecadação própria ~ transferências + PIB per capita
+Equação: propria ~ transf + pib + SP  |  Erros-padrão robustos HC1
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept    -14.3253      1.863     -7.690      0.000     -17.976     -10.674
+transf         3.3116      0.452      7.332      0.000       2.426       4.197
+pib            0.1012      0.015      6.690      0.000       0.072       0.131
+SP             1.1574      0.282      4.111      0.000       0.606       1.709
+==============================================================================
+Diagnósticos [M3 — Esforço fiscal (2016–2023): arrecadação própria ~ transferências + PIB per capita]: n=16; R²=0.930; R² aj.=0.912; Breusch-Pagan p=0.536; Durbin-Watson=2.06; Jarque-Bera p=0.484; VIF={'transf': 3.7, 'pib': 5.8, 'SP': 7.2}
+====================================================================================================
+M4 — Tipo de transferência (2016–2025): incondicionais (ICMS, IPVA, FPM) vs condicionadas (SUS, Fundeb)
+Equação: desp ~ transf_incond + transf_cond + propria + SP + t  |  Erros-padrão robustos HC1
+=================================================================================
+                    coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Intercept         7.8737      2.532      3.110      0.002       2.911      12.836
+transf_incond    -3.0783      1.579     -1.950      0.051      -6.173       0.016
+transf_cond      -1.1244      1.542     -0.729      0.466      -4.146       1.897
+propria           1.4239      0.624      2.280      0.023       0.200       2.648
+SP               -1.5212      1.121     -1.357      0.175      -3.719       0.676
+t                 0.0259      0.126      0.205      0.838      -0.221       0.273
+=================================================================================
+Diagnósticos [M4 — Tipo de transferência (2016–2025): incondicionais (ICMS, IPVA, FPM) vs condicionadas (SUS, Fundeb)]: n=20; R²=0.899; R² aj.=0.863; Breusch-Pagan p=0.929; Durbin-Watson=0.77; Jarque-Bera p=0.220; VIF={'transf_incond': 16.4, 'transf_cond': 3.3, 'propria': 32.9, 'SP': 43.1, 't': 15.6}
+Teste de Wald (transf_incond = transf_cond): estatística=1.009; p-valor=0.315
+====================================================================================================
+M5 — Robustez log-log (elasticidades), 2016–2025
+Equação: ln_desp ~ ln_transf + ln_propria + SP + t  |  Erros-padrão robustos HC1
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      1.6694      0.336      4.971      0.000       1.011       2.328
+ln_transf      0.2615      0.296      0.883      0.377      -0.319       0.842
+ln_propria    -0.2216      0.314     -0.706      0.480      -0.837       0.394
+SP             0.2551      0.122      2.098      0.036       0.017       0.493
+t              0.0496      0.017      2.850      0.004       0.015       0.084
+==============================================================================
+Diagnósticos [M5 — Robustez log-log (elasticidades), 2016–2025]: n=20; R²=0.899; R² aj.=0.873; Breusch-Pagan p=0.265; Durbin-Watson=0.78; Jarque-Bera p=0.611; VIF={'ln_transf': 5.1, 'ln_propria': 25.9, 'SP': 19.3, 't': 13.7}
+Teste de Wald (ln_transf = ln_propria): estatística=0.927; p-valor=0.336
+====================================================================================================
+M6 — Robustez em primeiras diferenças, 2017–2025
+Equação: d_desp ~ d_transf + d_propria  |  Erros-padrão robustos HC1
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      0.2107      0.117      1.795      0.073      -0.019       0.441
+d_transf       0.8629      0.803      1.075      0.282      -0.710       2.436
+d_propria      0.2117      0.303      0.698      0.485      -0.383       0.806
+==============================================================================
+Diagnósticos [M6 — Robustez em primeiras diferenças, 2017–2025]: n=18; R²=0.148; R² aj.=0.034; Breusch-Pagan p=0.030; Durbin-Watson=1.41; Jarque-Bera p=0.625; VIF={'d_transf': 1.1, 'd_propria': 1.1}
+Teste de Wald (d_transf = d_propria): estatística=0.533; p-valor=0.465
+====================================================================================================
+M7 — Sensibilidade: M2 com população oficial (estimativas IBGE; 2023 ausente)
+Equação: desp ~ transf + propria + SP + t  |  Erros-padrão robustos HC1
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     -0.5656      2.784     -0.203      0.839      -6.022       4.891
+transf         0.7133      0.944      0.755      0.450      -1.138       2.564
+propria        1.6836      0.504      3.343      0.001       0.697       2.671
+SP            -0.4351      0.605     -0.719      0.472      -1.622       0.751
+t             -0.1115      0.144     -0.774      0.439      -0.394       0.171
+==============================================================================
+Diagnósticos [M7 — Sensibilidade: M2 com população oficial (estimativas IBGE; 2023 ausente)]: n=18; R²=0.910; R² aj.=0.882; Breusch-Pagan p=0.362; Durbin-Watson=1.23; Jarque-Bera p=0.721; VIF={'transf': 7.8, 'propria': 27.4, 'SP': 18.1, 't': 16.6}
+Teste de Wald (transf = propria): estatística=0.954; p-valor=0.329
+====================================================================================================
+Japão (FY2016–FY2024, n=9) — correlações de Pearson (descritivas, sem inferência causal):
+  corr(loc_jp_autonomia_tributaria, loc_jp_dep_transf) = -0.985
+  corr(loc_jp_dep_transf_incondicional, loc_jp_autonomia_tributaria) = 0.903
+  corr(loc_jp_dep_transf, despesa_gg_pct_pib) = 0.986

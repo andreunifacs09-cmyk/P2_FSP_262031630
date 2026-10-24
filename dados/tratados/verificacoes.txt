@@ -1,0 +1,29 @@
+VERIFICAÇÕES DE CONSISTÊNCIA
+
+Receita corrente menos soma das origens principais (% — restante = agropecuária/industrial):
+municipio  ano  dif_rc_pct
+ Campinas 2015         0.0
+ Campinas 2016         0.0
+ Campinas 2017         0.0
+ Campinas 2018         0.0
+ Campinas 2019         0.0
+ Campinas 2020         0.0
+ Campinas 2021        -0.0
+ Campinas 2022        -0.0
+ Campinas 2023         0.0
+ Campinas 2024         0.0
+ Campinas 2025        -0.0
+São Paulo 2015         0.0
+São Paulo 2016         0.0
+São Paulo 2017         0.0
+São Paulo 2018         0.0
+São Paulo 2019         0.0
+São Paulo 2020         0.0
+São Paulo 2021         0.0
+São Paulo 2022         0.0
+São Paulo 2023         0.0
+São Paulo 2024         0.0
+São Paulo 2025         0.0
+
+Valores ausentes nas variáveis monetárias (mantidos como NA):
+nenhum
